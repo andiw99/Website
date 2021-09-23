@@ -1,0 +1,21 @@
+h2 {
+    margin-right:120px;
+    margin-left:120px;
+}
+
+ul.contact {
+    list-style-type: none;
+    margin-right:120px;
+    margin-left:120px;
+    padding: 0;
+
+}
+
+li.contact {
+    color: black;
+}
+
+div.pollsindex {
+    text-align: center;
+    background-color: white;
+}

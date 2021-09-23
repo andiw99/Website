@@ -1,0 +1,71 @@
+li {
+    color: orange;
+}
+ul {
+    color: orange;
+}
+
+li a.navbar {
+    color: brown;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+li.navbar {
+    float: left;
+    border-right: 1px solid black;
+    color: orange;
+}
+li.navbar:last-child {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-right: none
+}
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: dodgerblue;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+li a.navbar:hover {
+    background-color: lightblue;
+}
+
+p {
+    color: dodgerblue;
+}
+body {
+    background: rgba(173, 216, 230, 0.5);
+}
+
+ul.contact {
+    list-style-type: none;
+    margin-right:120px;
+    margin-left:120px;
+    padding: 0;
+
+}
+
+li.contact {
+    color: black;
+
+}
+
+li {
+    color: orange;
+}
+ul {
+    color: orange;
+}
+
+

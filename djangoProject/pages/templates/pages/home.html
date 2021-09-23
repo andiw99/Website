@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'pages/home_style.css' %}">
+    <h2>Das ist Andi's erste Website</h2>
+    <p> Hier findet ihr ein Bild von Andi:</p>
+    <img src="{% static "pages/images/archer.jpg" %}" style="width:400px;height:400px">
+{% endblock %}
