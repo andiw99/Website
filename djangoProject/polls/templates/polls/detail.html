@@ -10,7 +10,7 @@
 
 
     <h2 class="pollsindex">{{ question.question_text }}</h2>
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    {% if error_message %}<p style="margin-left:610px"><strong>{{ error_message }}</strong></p>{% endif %}
     <ul class="pollsindex">
     {% for choice in question.choice_set.all %}
         <input class="polls" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
@@ -18,6 +18,6 @@
     {% endfor %}
     </ul>
 
-<input class="pollsdetail" type="submit" value="Vote">
+<input class="pollsdetail" style="font-size: 20px" type="submit" value="Vote"> <a class="polls" href="{% url "polls:index" %}">Zurück</a>
 </form>
 {% endblock %}

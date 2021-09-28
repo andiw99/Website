@@ -9,6 +9,8 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+from .forms import QuestionForm, ChoiceForm
+from django.forms import formset_factory
 
 def index(request):
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
@@ -43,6 +45,46 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+def createview(request, nr_of_choices):
+    # initialize forms
+    nr_of_choices = max(nr_of_choices, 1)
+    form = QuestionForm(request.POST or None)
+    choiceFormSet = formset_factory(ChoiceForm, extra=nr_of_choices)
+    choice_forms = choiceFormSet(request.POST or None)
+
+    # save question to get question id
+    if form.is_valid():
+        form.save()
+
+    valid_choices = 0
+    for choice_form in choice_forms:
+        if choice_form.is_valid():
+            # create choice instance
+            try:
+                valid_choices += 1
+                c = Choice( question=Question.objects.last(),
+                            choice_text=choice_form.cleaned_data["choice_text"],
+                            votes=choice_form.cleaned_data["votes"]
+                            )
+                c.save()
+            except KeyError:
+                pass
+
+    if not valid_choices and form.is_valid():
+        Question.objects.last().delete()
+    else:
+        form = QuestionForm()
+        choice_form = choiceFormSet()
+
+    context = {
+        "form": form,
+        "choice_forms": choice_forms,
+        "nr_of_choices": nr_of_choices,
+    }
+
+    return render(request, "polls/create.html", context)
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

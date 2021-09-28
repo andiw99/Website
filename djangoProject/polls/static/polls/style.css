@@ -14,18 +14,31 @@ li a.pollsindex {
 li.pollsindex {
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-    border-right: 1px solid grey;
-    border-left: 1px solid grey;
+}
+
+li.pollsresult {
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+}
+
+li.pollsvotes {
+    font-size: 20px;
+    display: inline-block;
+    float:right;
 }
 
 li.pollsindex:first-child {
-    border-top-left-radius: 25px;
+    border-top: none;
     border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 li.pollsindex:last-child {
-    border-bottom-left-radius: 25px;
+    border-bottom: none;
     border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 label.polls {
@@ -49,6 +62,10 @@ ul.pollsindex {
     margin-right: 600px;
     background-color: white;
     border-radius: 25px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
 }
 
 h1.pollsdetail {
@@ -62,4 +79,103 @@ h1 {
 
 input.pollsdetail {
     margin-left: 610px
+}
+
+a.polls {
+  font-size: 20px;
+  text-decoration: none;
+  background-color: white;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+div.pollschoice li {
+    display: inline;
+    padding: 20px;
+}
+div.pollschoice li {
+    padding-right: 0px;
+}
+
+div.pollschoice {
+    padding-bottom: 10px;
+    background-color: white;
+    margin-left: 610px;
+    margin-right: 610px;
+}
+
+div.pollschoice:first-child {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-top: 10px;
+}
+
+div.pollschoice:last-child {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+div.pollschoice li:first-child {
+    padding-top:10px;
+}
+
+div.pollschoice li input[type="number"] {
+    width:40px;
+}
+
+#QuestionTitle {
+    font-size:25px;
+    margin-left: 610px;
+    margin-top: 40px;
+}
+
+#id_pub_date {
+    margin-left:610px;
+    font-size: 15px;
+}
+
+span.helptext {
+    display: flex;
+    padding: 0px;
+    margin-left: 615px;
+    font-size: 15px;
+    color: black;
+}
+
+ul.pollschoices {
+    padding: 0px;
+
+}
+
+a.button {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    padding-top: 7px;
+    padding-bottom: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: Helvetica;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+}
+
+a.button:first-child {
+    margin-left: 610px;
+}
+
+li.choicesheader {
+    color: black;
+    float: left;
+    margin-left: 620px;
+    display: inline;
 }

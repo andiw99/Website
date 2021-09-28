@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "polls/style.css" %}">
+    <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+    {{ form.as_p }}
+    {{ choice_forms.management_data }}
+    <li class="choicesheader">Choices</li> <li class="choicesheader" style="margin-left: 450px">Votes</li> <br>
+
+        <ul class="pollschoices">
+    {% for choice_form in choice_forms %}
+    <div class="pollschoice">
+        {{ choice_form.as_ul }}</div>
+    {% endfor %}
+    </ul>
+    <a class="button" style="margin-left: 610px" href="{% url "polls:create" nr_of_choices|add:1 %}"> Add Choice </a>
+    <a class="button" href="{% url "polls:create" nr_of_choices|add:-1 %}">Remove Choice </a>
+    <input type="submit", value="Save" />
+    </form>
+{% endblock %}
