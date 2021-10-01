@@ -25,18 +25,55 @@ ul.navbar {
     padding: 0;
     overflow: hidden;
     background-color: dodgerblue;
-    margin-left: 120px;
-    margin-right: 120px;
 }
 
 li a.navbar:hover {
     background-color: lightblue;
 }
 
-p {
-    color: dodgerblue;
-}
 body {
-    background: rgba(173, 216, 230, 0.5);
+    background: white;
 }
 
+.footer {
+    background-color: dodgerblue;
+    position: fixed;
+    bottom:0;
+    height: 50px;
+    width: 100%;
+}
+
+img.social_images {
+    padding: 30px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+div.social_images {
+    margin: 0 auto;
+    width: 300px;
+}
+
+div.django_image {
+    float: left;
+    padding: 5px;
+    padding-top: 15px;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+}
+
+img.django_image {
+    height:30px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+div.django_image_hidden {
+    float: right;
+    padding: 0px;
+    visibility: hidden;
+}

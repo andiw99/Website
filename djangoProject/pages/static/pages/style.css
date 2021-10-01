@@ -1,0 +1,38 @@
+h2 {color: darkblue; text-align: center;}
+p {
+    text-align: justify;
+    color: black;
+    font-size: 25px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.text {
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    width: 34%;
+    background-color: rgba(30,144,255, 0.2);
+    border-radius: 25px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+div.text {
+    list-style-type: none;
+    padding: 10px;
+    margin: auto;
+    width: 34%;
+    background-color: rgba(30,144,255, 0.2);
+    border-radius: 25px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}

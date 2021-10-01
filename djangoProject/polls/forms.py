@@ -5,8 +5,7 @@ from .models import Question, Choice
 class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question
-        #question_text = forms.CharField(label="Question text", max_length=200)
-        #pub_date = forms.DateTimeField()
+
 
         fields = [
             "question_text",
@@ -25,7 +24,6 @@ class QuestionForm(forms.ModelForm):
                     "placeholder": "Your Question:",
                     "rows": 1,
                     "id": "QuestionTitle",
-                    "size": 30,
                 }
             ),
             "pub_date": forms.DateTimeInput()
@@ -41,7 +39,7 @@ class ChoiceForm(forms.Form):
                                   widget=forms.TextInput(
                                       attrs={
                                           "placeholder": "",
-                                          "size": 46,
+                                          "size": 48,
                                       }
                                   ))
     votes = forms.IntegerField(min_value=0, initial=0, label="")

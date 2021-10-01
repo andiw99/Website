@@ -53,6 +53,7 @@ def createview(request, nr_of_choices):
     form = QuestionForm(request.POST or None)
     choiceFormSet = formset_factory(ChoiceForm, extra=nr_of_choices)
     choice_forms = choiceFormSet(request.POST or None)
+    single_choice_form = ChoiceForm(request.POST or None)
 
     # save question to get question id
     if form.is_valid():
@@ -62,6 +63,7 @@ def createview(request, nr_of_choices):
     for choice_form in choice_forms:
         if choice_form.is_valid():
             # create choice instance
+            print("laufen wir hier rein?")
             try:
                 valid_choices += 1
                 c = Choice( question=Question.objects.last(),
@@ -72,12 +74,12 @@ def createview(request, nr_of_choices):
             except KeyError:
                 pass
 
+
     if not valid_choices and form.is_valid():
         Question.objects.last().delete()
     else:
         form = QuestionForm()
-        choice_form = choiceFormSet()
-
+    choice_forms = choiceFormSet()
     context = {
         "form": form,
         "choice_forms": choice_forms,

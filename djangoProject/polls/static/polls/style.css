@@ -20,7 +20,7 @@ li.pollsresult {
     color: black;
     padding: 10px;
     font-size: 20px;
-    display: block;
+    diyplay:block
 }
 
 li.pollsvotes {
@@ -60,7 +60,7 @@ ul.pollsindex {
     padding: 0;
     margin-left: 600px;
     margin-right: 600px;
-    background-color: white;
+    background-color: rgba(30,144,255, 0.2);
     border-radius: 25px;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
@@ -97,17 +97,16 @@ a.polls {
 
 div.pollschoice li {
     display: inline;
-    padding: 20px;
-}
-div.pollschoice li {
-    padding-right: 0px;
+    line-height: 50px;
 }
 
 div.pollschoice {
     padding-bottom: 10px;
-    background-color: white;
-    margin-left: 610px;
-    margin-right: 610px;
+    background-color: rgba(30,144,255, 0.2);
+    margin: auto;
+    width: 40%;
+    border-radius: 25px;
+    margin-bottom: 20px;
 }
 
 div.pollschoice:first-child {
@@ -121,36 +120,36 @@ div.pollschoice:last-child {
     border-bottom-right-radius: 25px;
 }
 
-div.pollschoice li:first-child {
-    padding-top:10px;
-}
 
 div.pollschoice li input[type="number"] {
-    width:40px;
+    width:5%;
+    margin-left: 1%;
+}
+div.pollschoice li input[type="text"] {
+    width: 80%;
+    margin-left: 4%;
 }
 
 #QuestionTitle {
     font-size:25px;
-    margin-left: 610px;
+    width: 40%;
     margin-top: 40px;
 }
 
 #id_pub_date {
-    margin-left:610px;
     font-size: 15px;
+    align-self: auto;
 }
 
 span.helptext {
     display: flex;
     padding: 0px;
-    margin-left: 615px;
     font-size: 15px;
     color: black;
 }
 
 ul.pollschoices {
     padding: 0px;
-
 }
 
 a.button {
@@ -173,9 +172,9 @@ a.button:first-child {
     margin-left: 610px;
 }
 
-li.choicesheader {
+p.choicesheader {
     color: black;
     float: left;
-    margin-left: 620px;
+    margin-left: 4%;
     display: inline;
 }
