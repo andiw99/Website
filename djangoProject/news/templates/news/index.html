@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "news/style.css" %}">
+{% if latest_article_list %}
+    <h2 style="margin-left: 25%">Neueste Artikel:</h2>
+    <div class="wrapper">
+    <ul class="articleindex">
+    {% for article in latest_article_list %}
+        <li><a class="articleindex" href="{% url "news:detail" article.title %}">{{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
+    </div>
+
+{% else %}
+    <p>No polls are available.</p>
+
+{% endif %}
+<a class="news" style="font-size: 20px" href="{% url "polls:create" 3 %}"> Create </a>
+{% endblock %}

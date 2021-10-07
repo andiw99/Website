@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+<head>Details</head>
+
+{% block content %}
+
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "news/style.css" %}">
+    <form action="{% url 'polls:vote' article.id %}" method="post">
+    {% csrf_token %}
+    <p>{{ article.banner.url }}</p>
+    {% static "news/images/archer_oX1i0SC.jpg" %}
+
+    <img src="{% static "news/images/archer_oX1i0SC.jpg" %}">
+    <img src="{{ article.banner.url }}">
+    <img src="../news/static/news/images/archer_oX1i0SC.jpg">
+    <h2 style="margin-left: 25%">{{ article.title }}</h2>
+    <p>{{ article.article_text }}</p>
+
+    {% if error_message %}<p style="margin-left:610px"><strong>{{ error_message }}</strong></p>{% endif %}
+
+</form>
+{% endblock %}

@@ -2,6 +2,7 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet"  href="{% static 'pages/style.css' %}">
+
     <h2>About me and this Website</h2>
     <div class="text">
     <p>
@@ -16,8 +17,24 @@ Currently i am looking for a part time job in Machine Learning or Data Science. 
         Feel free to contact me if you need anything done related to Python, Data Science, Machine-Learning or Web-Development!
     </p>
     </div>
-    <p> Hier findet ihr ein Bild von Andi:</p>
-    <img src="{% static "pages/images/archer.jpg" %}" style="width:400px;height:400px">
-    <img src="{% static "pages/images/archer.jpg" %}" style="width:400px;height:400px">
-    <img src="{% static "pages/images/archer.jpg" %}" style="width:400px;height:400px">
+    <h2 id="test">0</h2>
+    <button id="increment-button" onclick="increment()">Increment</button>
+    <button id="decrement-button" onclick="decrement()">Decrement</button>
+    <button id="save-button" onclick="save()">Save</button>
+    <p id="error"></p>
+    <button id="purchase" style="display: block" onclick="raise_error()">Purchase</button>
+
+    <div id="animation_background">
+        <div id="animated_obj"></div>
+    </div>
+    <button id="start_animation" style="margin-bottom: 5vh; margin-left:10vw" onclick="myMove()"> Start Animation</button>
+    <button id="stop_animation" onclick="stopMyMove()"> Stop Animation </button>
+
+    <div id="clock_container">
+    <img id="clock" src='{% static "pages/images/clock-cropped.png" %}' style="margin-bottom: 5vh">
+    <div id="minute-hand"></div>
+    <div id="hour-hand"></div>
+    <div id="second-hand"></div>
+    </div>
+    <script src="{% static 'pages/home.js' %}"></script>
 {% endblock %}

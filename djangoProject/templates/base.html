@@ -6,11 +6,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'pages/base_style.css' %}">
     <title>Andi's erste Website</title>
 </head>
-<body>
+<body style="background-image: url('{% static "pages/images/background-blue.png" %}'); background-size: 100% auto">
 <ul class="navbar">
-    <li class="navbar"><a class="navbar" href="{% url "home" %}">Home</a></li>
+    <li class="navbar"><a class="navbar" href="{% url "pages:home" %}">Home</a></li>
     <li class="navbar"><a class="navbar" href="{% url "polls:index" %}">Umfragen</a></li>
-    <li class="navbar"><a class="navbar" href="{% url "contact" %}">Kontakt</a></li>
+    <li class="navbar"><a class="navbar" href="{% url "news:index" %}">News</a></li>
+    <li class="navbar"><a class="navbar" href="{% url "pages:contact" %}">Kontakt</a></li>
     <li class="navbar" style="float:right">Andi's Homepage</li>
 </ul>
     {% block content %}
@@ -26,4 +27,5 @@
     </div>
 </div>
 </body>
+
 </html>
