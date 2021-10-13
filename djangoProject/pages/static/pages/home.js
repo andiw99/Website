@@ -70,9 +70,11 @@ function animate_clock() {
     let minutes = date.getMinutes()/60;
     let hours = date.getHours()/12;
 
+    let hour_rotation = hours * 360 + minutes * 30
+
     secondHand.style.transform = "rotate(" + seconds * 360 + "deg)"
     minuteHand.style.transform = "rotate(" + minutes * 360 + "deg)"
-    hourHand.style.transform = "rotate(" + hours *360 + "deg)"
+    hourHand.style.transform = "rotate(" + hour_rotation + "deg)"
 }
 animate_clock()
 setInterval(animate_clock, 1000)

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Article
 from django.shortcuts import get_object_or_404
+from .forms import ArticleForm
 # Create your views here.
 
 
@@ -18,3 +19,19 @@ def detail_view(request, title):
     }
     return render(request, "news/detail.html", context)
 
+def create_view(request):
+    print("request method:", request.method)
+
+    form = ArticleForm(request.POST or None, request.FILES or None)
+
+    if request.method == "POST":
+        print(form.data)
+        if form.is_valid():
+            print("form is valid")
+            form.save()
+
+    context = {
+        "form": form
+    }
+
+    return render(request, "news/create.html", context)

@@ -7,15 +7,11 @@
     <link rel="stylesheet" type="text/css" href="{% static "news/style.css" %}">
     <form action="{% url 'polls:vote' article.id %}" method="post">
     {% csrf_token %}
-    <p>{{ article.banner.url }}</p>
-    {% static "news/images/archer_oX1i0SC.jpg" %}
-
-    <img src="{% static "news/images/archer_oX1i0SC.jpg" %}">
-    <img src="{{ article.banner.url }}">
-    <img src="../news/static/news/images/archer_oX1i0SC.jpg">
+    <img style="margin: auto; display: block; margin-top:2vh; width: 50%; height: 30vh; object-fit: cover" src="{{ article.banner.url }}">
     <h2 style="margin-left: 25%">{{ article.title }}</h2>
-    <p>{{ article.article_text }}</p>
-
+    <div class="text">
+    {{ article.article_text|linebreaks }}
+    </div>
     {% if error_message %}<p style="margin-left:610px"><strong>{{ error_message }}</strong></p>{% endif %}
 
 </form>
