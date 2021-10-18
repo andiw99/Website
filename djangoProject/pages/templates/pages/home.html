@@ -3,38 +3,46 @@
     {% load static %}
     <link rel="stylesheet"  href="{% static 'pages/style.css' %}">
 
-    <h2>About me and this Website</h2>
-    <div class="text">
-    <p>
-        Hi, my Name is Andreas and i'm a freshly finishied student of physics from Germany! I am interested in topics all around Computer Science, but espacially Machine Learning and Data Science. My studies taught me profound knowledge of mathematics and excellent problem-solving skills to deal with any complex question.
-    </p> <p>
-Currently i am looking for a part time job in Machine Learning or Data Science. Nevertheless i can also imagine myself in a different area of computer science, if the conditions are fitting.
-    </p>
-    <p>
-        This demo-website was written in Python, Django for practice-purposes. It shows my understanding of basic principles of backend and frontend of web development, e.g. Django, HTML and CSS. The integrated polls app is an extended version of the one showcased in the beginner tutorial of the Django documentation.
-    </p>
-    <p>
-        Feel free to contact me if you need anything done related to Python, Data Science, Machine-Learning or Web-Development!
-    </p>
-    </div>
-    <h2 id="test">0</h2>
-    <button id="increment-button" onclick="increment()">Increment</button>
-    <button id="decrement-button" onclick="decrement()">Decrement</button>
-    <button id="save-button" onclick="save()">Save</button>
-    <p id="error"></p>
-    <button id="purchase" style="display: block" onclick="raise_error()">Purchase</button>
+    {% if latest_article_list %}
+        <div class="articleslider" style="margin-top: 10vh">
+        {% for article in latest_article_list %}
+                {% with forloop.counter|stringformat:"s" as counter %}
+                {% with "article_"|add:counter as article_id %}
+                <div class="bannerwrapper" id = {{ article_id }}>
 
-    <div id="animation_background">
-        <div id="animated_obj"></div>
-    </div>
-    <button id="start_animation" style="margin-bottom: 5vh; margin-left:10vw" onclick="myMove()"> Start Animation</button>
-    <button id="stop_animation" onclick="stopMyMove()"> Stop Animation </button>
+                    <img src="{{ article.banner.url }}" class="banner">
+                    <a href="{% url "news:detail" article.title %}">
+                    <div class="bannertext">
+                        <h2 class="bannerheader"> {{ article.title }}</h2>
+                        <p class="bannerintro"> {{ article.get_intro|linebreaksbr }}</p>
+                    </div>
+                    </a>
 
+                </div>
+                {% endwith %}
+                {% endwith %}
+        {% endfor %}
+
+        {% for article in latest_article_list %}
+            {% with forloop.counter|stringformat:"s" as counter %}
+            {% with "indicator_"|add:counter as indicator_id %}
+            <div class="indicator" id={{ indicator_id }}>  </div>
+            {% endwith %}
+            {% endwith %}
+        {% endfor %}
+
+        <div class="buttonslider" onclick="swipe_left({{ nr_articles }})"> <img class="arrow" src="/media/images/pfeil-links.png"></div>
+        <div class="buttonslider" style="left: 100%; transform: translate(-100%, -50%)" onclick="swipe_right({{ nr_articles }})"><img class="arrow" src="/media/images/pfeil-rechts.png"></div>
+        </div>
+    {% else %}
+
+    {% endif %}
     <div id="clock_container">
     <img id="clock" src='{% static "pages/images/clock-cropped.png" %}' style="margin-bottom: 5vh">
     <div id="minute-hand"></div>
     <div id="hour-hand"></div>
     <div id="second-hand"></div>
     </div>
-    <script src="{% static 'pages/home.js' %}"></script>
+    <script src="{% static 'pages/home.js' %}" onload="start_slide_article({{ nr_articles }}); indicator({{ nr_articles }})">
+    </script>
 {% endblock %}

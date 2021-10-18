@@ -15,4 +15,4 @@ class Article(models.Model):
         return self.title
 
     def get_intro(self):
-        return self.article_text[:250] + "..."
+        return self.article_text[:225] + "..."

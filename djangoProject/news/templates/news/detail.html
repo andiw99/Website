@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "news/style.css" %}">
     <form action="{% url 'polls:vote' article.id %}" method="post">
     {% csrf_token %}
-    <img style="margin: auto; display: block; margin-top:2vh; width: 50%; height: 30vh; object-fit: cover" src="{{ article.banner.url }}">
+    <img class="banner" src="{{ article.banner.url }}">
     <h2 style="margin-left: 25%">{{ article.title }}</h2>
     <div class="text">
     {{ article.article_text|linebreaks }}
