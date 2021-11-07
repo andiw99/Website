@@ -1,0 +1,221 @@
+h2 {color: darkblue; text-align: center;}
+p {
+    text-align: justify;
+    color: black;
+    font-size: 25px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.text {
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    width: 34%;
+    background-color: rgba(30,144,255, 0.2);
+    border-radius: 10px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+div.text {
+    list-style-type: none;
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgba(250,250,250,0.5);
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+
+#animation_background {
+    width: 80vw;
+    margin-left: 10vw;
+    height: 10vh;
+    background-color: rgba(250, 250, 250, 0.5);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 1vh;
+}
+
+#animated_obj {
+    width: 5%;
+    height: 80%;
+    border-radius: 50%;
+    margin-left: 2%;
+    position: absolute;
+    background: dodgerblue;
+    display: inline-block;
+}
+
+#clock_container {
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    margin-bottom: 10vh;
+    top: 15vh;
+    right:5vh;
+}
+
+#clock {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#hour-hand {
+    position: absolute;
+    width: 4%;
+    height: 25%;
+    background-color: black;
+    margin-left: 48%;
+    margin-top: 25%;
+    border-radius: 2vh;
+    transform-origin: bottom;
+}
+
+#minute-hand {
+    position: absolute;
+    width: 3%;
+    height: 40%;
+    background-color: black;
+    margin-left: 48.5%;
+    margin-top: 10%;
+    border-radius: 2vh;
+    transform-origin: bottom;
+}
+
+#second-hand {
+    position: absolute;
+    width: 2%;
+    height: 45%;
+    background-color: black;
+    margin-left: 49%;
+    margin-top: 5%;
+    border-radius: 2vh;
+    transform-origin: bottom;
+}
+
+img.banner {
+    margin:auto;
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    opacity: 1;
+    position: absolute;
+    padding:0;
+    margin-left:0
+}
+
+div.articleslider {
+    margin:auto;
+    width: 60vw;
+    height: 50vh;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 10px;
+    border-top: 4px solid dodgerblue;
+    border-bottom: 4px solid dodgerblue;
+    border-right: 4px solid dodgerblue;
+    border-left: 4px solid dodgerblue;
+    padding: 0;
+    position: relative;
+}
+
+div.bannerwrapper {
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+    position:relative;
+    white-space: nowrap;
+    padding:0;
+    margin-left: -5px;
+}
+div.bannerwrapper:first-child{
+    margin-left:0;
+}
+
+div.bannertext {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4vh;
+    height: auto;
+    position: absolute;
+    white-space: normal;
+    border-radius: 10px;
+    background-color: rgba(250,250,250,0.6);
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+h2.bannerheader {
+    text-align: left;
+    opacity: 1;
+    color: black;
+    margin: 0;
+    padding: 5px;
+    font-size: 4vh;
+}
+
+div.bannerintro {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 12vh;
+    position: absolute;
+    white-space: normal;
+    padding: 5px;
+}
+
+p.bannerintro {
+    margin: 0;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    padding: 5px;
+}
+
+div.buttonslider {
+    width: 5vh;
+    height: 5vh;
+    background-color: rgba(250,250,250,0.5);
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    position: absolute;
+}
+
+div.buttonslider:hover {
+    background-color: rgba(250,250,250,0.7);
+}
+
+img.arrow {
+    position: absolute;
+    display: inline-block;
+    object-fit: cover;
+    width: 5vh;
+    height: 3.5vh;
+    top: 0.75vh
+}
+
+div.indicator {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    background-color: rgba(250,250,250,0.5);
+    position: absolute;
+    bottom: 2vh;
+}

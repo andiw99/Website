@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'pages/contact_style.css' %}">
+
+    <h2>Andreas Weitzel</h2>
+    <ul class="contact">
+        <li class="contact">Waldheimer Str. 25 </li>
+        <li class="contact">01159 Dresden </li>
+        <li class="contact">+49 170 6589739 </li>
+        <li class="contact">andi.weitzel@gmx.de </li>
+    </ul>
+
+    <ul class="contact">
+        <li class="contact" style="line-height: 40px"> Xing: <a href="https://xing.com/profile/Andreas_Weitzel8"> <img class="social_images_contact" src="{% static "pages/images/Xing.png" %}"></a></li>
+        <li class="contact" style="line-height: 40px"> LinkedIn: <a href="https://linkedin.com/in/aw1999"><img class="social_images_contact" src="{% static "pages/images/LinkedIn.png" %}"></a></li>
+        <li class="contact" style="line-height: 40px"> GitHub: <a href="https://github.com/andiw99"><img class="social_images_contact" src="{% static "pages/images/Github.png" %}"> </a></li>
+    </ul>
+{% endblock %}

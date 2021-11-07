@@ -1,0 +1,92 @@
+li a.navbar {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+li.navbar {
+    float: left;
+    border-right: 1px solid black;
+}
+li.navbar:last-child {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-right: none
+}
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: dodgerblue;
+}
+
+li a.navbar:hover {
+    background-color: lightblue;
+}
+
+.footer {
+    background-color: dodgerblue;
+    position: fixed;
+    bottom:0;
+    height: 5vh;
+    width: 100vw;
+}
+
+img.social_images {
+    padding: 30px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+div.social_images {
+    margin: 0 auto;
+    width: 300px;
+}
+
+div.django_image {
+    float: left;
+    padding: 5px;
+    padding-top: 15px;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+}
+
+img.django_image {
+    height:30px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+div.django_image_hidden {
+    float: right;
+    padding: 0px;
+    visibility: hidden;
+}
+
+div.background {
+    background-color: rgba(255,255,255,0.7);
+    background-blend-mode: lighten;
+    height: 100vh;
+    background-repeat: repeat-y;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#animation_wrapper {
+    height: 100vh;
+    width: 100vw;
+}

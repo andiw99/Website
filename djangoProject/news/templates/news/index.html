@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "news/style.css" %}">
+{% if latest_article_list %}
+    <h1 style="margin-left: 10%">Latest Articles:</h1>
+    <div class="wrapper">
+    <ul class="articleindex">
+    {% for article in latest_article_list %}
+        <li class="articleindex">
+            <a class="articleindex" href="{% url "news:detail" article.title %}">
+            <div class="imagewrapper"><img src="{{ article.banner.url}}" class="index"></div>
+                <div class="headerwrapper"><h3 class="articleindex">{{ article.title }}</h3></div>
+                <div class="descriptionwrapper"> <p class="articleindex">{{ article.get_longer_intro|linebreaksbr }} </p> </div>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+    </div>
+
+{% else %}
+    <p>No polls are available.</p>
+
+{% endif %}
+    <div style="margin-bottom: 6vh">
+    <a class="news" style="font-size: 20px; margin-bottom: 5vh" href="{% url "news:create"%}"> Create </a>
+    </div>
+{% endblock %}

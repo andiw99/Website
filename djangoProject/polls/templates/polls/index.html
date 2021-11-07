@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "polls/style.css" %}">
+{% if latest_question_list %}
+    <h2 class="pollsindex">Latest Polls:</h2>
+    <ul class="pollsindex">
+    {% for question in latest_question_list %}
+        <li class="pollsindex"><a class="pollsindex" href="{% url "polls:detail" question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <p>No polls are available.</p>
+
+
+{% endif %}
+<a class="polls" style="margin-left: 610px; font-size: 20px" href="{% url "polls:create" 3 %}"> Create </a>
+{% endblock %}
