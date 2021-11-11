@@ -29,6 +29,7 @@ def create_view(request):
         if form.is_valid():
             print("form is valid")
             form.save()
+            form = ArticleForm()
 
     context = {
         "form": form

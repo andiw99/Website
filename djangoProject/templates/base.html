@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'pages/base_style.css' %}">
-    <title>Andi's erste Website</title>
+    <title>Weitzel-IT</title>
 </head>
 <body style="background-image: url('{% static "pages/images/background-blue.png" %}'); background-size: 100% auto">
 <ul class="navbar">
     <li class="navbar"><a class="navbar" href="{% url "pages:home" %}">Home</a></li>
     <li class="navbar"><a class="navbar" href="{% url "polls:index" %}">Polls</a></li>
     <li class="navbar"><a class="navbar" href="{% url "news:index" %}">News</a></li>
+    <li class="navbar"><a class="navbar" href="{% url "pages:services" %}">Services</a></li>
     <li class="navbar"><a class="navbar" href="{% url "pages:contact" %}">Contact</a></li>
-    <li class="navbar" style="float:right">Andi's Homepage</li>
+    <li class="navbar" style="float:right">Weitzel-IT</li>
 </ul>
     {% block content %}
         Platzhaltertext
@@ -21,9 +22,9 @@
 <div class="footer">
     <div class="django_image"> Made with <a href="https://djangoproject.com"> <img class="django_image" src="{% static "pages/images/Django.png" %}"></a></div>
     <div class="social_images">
-            <a href="https://xing.com/profile/Andreas_Weitzel8"> <img class="social_images" src="{% static "pages/images/Xing.png" %}" style="width:2em;height:2em"></a>
-            <a href="https://github.com/andiw99"><img class="social_images" src="{% static "pages/images/Github.png" %}" style="width:2em;height:2em"> </a>
-            <a href="https://linkedin.com/in/aw1999"><img class="social_images" src="{% static "pages/images/LinkedIn.png" %}" style="width:2em; height:2em"></a>
+            <a href="https://xing.com/profile/Andreas_Weitzel8"> <img class="social_images" src="{% static "pages/images/Xing.png" %}"></a>
+            <a href="https://github.com/andiw99"><img class="social_images" src="{% static "pages/images/Github.png" %}" > </a>
+            <a href="https://linkedin.com/in/aw1999"><img class="social_images" src="{% static "pages/images/LinkedIn.png" %}" ></a>
     </div>
 </div>
 </body>

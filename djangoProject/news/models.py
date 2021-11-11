@@ -15,12 +15,20 @@ class Article(models.Model):
         return self.title
 
     def get_intro(self):
-        return self.article_text[:225] + "..."
+        try:
+            return self.article_text[:225] + "..."
+        except IndexError:
+            return self.article_text
 
     def get_longer_intro(self):
-        base_text = self.article_text[:325]
-        i = 1
-        while self.article_text[(325 + i)] != " ":
-            base_text += self.article_text[325 + i]
-            i += 1
-        return base_text + "..."
+        try:
+            base_text = self.article_text[:325]
+            i = 1
+            while self.article_text[(325 + i)] != " ":
+                base_text += self.article_text[325 + i]
+                i += 1
+            return base_text + "..."
+        except IndexError:
+            base_text = self.article_text
+            return base_text + "..."
+

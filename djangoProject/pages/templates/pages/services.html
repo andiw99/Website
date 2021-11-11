@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'pages/style.css' %}">
+
+    <div>
+    <ul class="serviceindex">
+        <li class="serviceindex">
+            <div class="imagewrapper">
+                <img src="media/images/www.jpg" class="index">
+            </div>
+            <div class="headerwrapper">
+                <h1 class="serviceindex">Web-Development</h1>
+            </div>
+            <div class="descriptionwrapper">
+                <p class="serviceindex"> Weitzel-It acquired expertise in Web-Development
+                by coding Websites like this one self-handedly.
+                    Everything, involving Frontend-, Backend-Development until Deployment can be done by us.</p>
+            </div>
+        </li>
+                <li class="serviceindex">
+            <div class="imagewrapper" style="float: left; padding-right: 0.5vh">
+                <img src="media/images/data-science.jpg" class="index" style="float:left">
+            </div>
+            <div class="headerwrapper">
+                <h1 class="serviceindex">Data Science</h1>
+            </div>
+            <div class="descriptionwrapper">
+                <p class="serviceindex"> At Weitzel-IT, we are not afraid of huge amounts of data.
+                If you need any information extracted out of your masses of data, we are the right consultant.
+                With a background in physics, statistical data analysis is daily buisness for us and you can be sure that we are profound with the mathematical basics. </p>
+            </div>
+        </li>
+                </li>
+                <li class="serviceindex">
+            <div class="imagewrapper">
+                <img src="media/images/machine-learning.jpg" class="index" style="float:left">
+            </div>
+            <div class="headerwrapper">
+                <h1 class="serviceindex">Machine Learning</h1>
+            </div>
+            <div class="descriptionwrapper">
+                <p class="serviceindex"> Our specialty are neural networks.
+                    We can easily create a statistical model of your data and provide it to you so that you can use it for your own purposes.
+                    Our neural networks can even be used for highly uncommon situations, like learning the differential cross section of a process right out of particle physics.
+                </p>
+            </div>
+        </li>
+        <li class="serviceindex">
+            <div class="imagewrapper" style="float: left; padding-right: 0.5vh">
+                <img src="media/images/private-lessons.jpg" class="index" style="float:left">
+            </div>
+            <div class="headerwrapper">
+                <h1 class="serviceindex">Private Lessons</h1>
+            </div>
+            <div class="descriptionwrapper">
+                <p class="serviceindex"> Weitzel-IT has deep roots in academics, so we gladly offer Private Lessons for various topics.
+                These include Physics (up to your bachelor's degree), Maths (up to your third semester) and Coding.</p>
+            </div>
+        </li>
+    </ul>
+
+    </div>
+
+{% endblock %}

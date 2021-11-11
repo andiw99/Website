@@ -56,7 +56,7 @@ div.text {
     border-radius: 50%;
     margin-left: 2%;
     position: absolute;
-    background: dodgerblue;
+    background: rgba(128, 191, 255, 1);
     display: inline-block;
 }
 
@@ -127,10 +127,10 @@ div.articleslider {
     white-space: nowrap;
     overflow: hidden;
     border-radius: 10px;
-    border-top: 4px solid dodgerblue;
-    border-bottom: 4px solid dodgerblue;
-    border-right: 4px solid dodgerblue;
-    border-left: 4px solid dodgerblue;
+    border-top: 4px solid rgba(128, 191, 255, 1);
+    border-bottom: 4px solid rgba(128, 191, 255, 1);
+    border-right: 4px solid rgba(128, 191, 255, 1);
+    border-left: 4px solid rgba(128, 191, 255, 1);
     padding: 0;
     position: relative;
 }
@@ -193,9 +193,10 @@ div.buttonslider {
     height: 5vh;
     background-color: rgba(250,250,250,0.5);
     top: 50%;
-    left: 0%;
+    left: 0.5%;
     transform: translate(0%, -50%);
     position: absolute;
+    border-radius: 10px;
 }
 
 div.buttonslider:hover {
@@ -218,4 +219,73 @@ div.indicator {
     background-color: rgba(250,250,250,0.5);
     position: absolute;
     bottom: 2vh;
+}
+
+ul.serviceindex {
+    list-style-type: none;
+    padding: 0;
+    width: 90%;
+    margin: auto;
+    background-color: rgba(250,250,250,0.5);
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+li.serviceindex {
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    height: 42vh;
+    position:relative;
+    padding-top: 20vh;
+    padding-bottom: 1vh;
+}
+
+div.headerwrapper {
+    height: 5vh;
+    display: block;
+}
+div.descriptionwrapper {
+    height: 28vh;
+    margin-top: 7vh;
+    margin-bottom: 0;
+    padding: 5vh;
+
+}
+
+div.imagewrapper {
+    vertical-align: center;
+    margin-top: 0;
+    padding: 0;
+    height: 40vh;
+    float:right;
+    position: relative;
+}
+
+
+p.serviceindex {
+    display: inline;
+    font-size: 2vh;
+    color: black;
+    line-height: 2.5vh;
+}
+
+img.index {
+    object-fit: cover;
+    height: 40vh;
+    width: 40vw;
+    display: inline-block;
+    float: right;
+    margin: 0 auto;
+    padding: 5vh;
+    padding-top: 0;
+}
+
+h1.serviceindex {
+    margin-top: 0;
+    font-size: 3vh;
+    padding: 5vh
 }

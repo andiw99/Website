@@ -17,3 +17,6 @@ def home_view(request):
 
 def contact_view(request):
     return render(request, template_name="pages/contact.html")
+
+def service_view(request):
+    return render(request, template_name="pages/services.html")

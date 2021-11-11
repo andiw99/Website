@@ -17,6 +17,6 @@
         </div>
     <a class="button" style="margin-left: 30%" href="{% url "polls:create" nr_of_choices|add:1 %}"> Add Choice </a>
     <a class="button" href="{% url "polls:create" nr_of_choices|add:-1 %}">Remove Choice </a>
-    <input type="submit", value="Save" />
+    <input class="button" type="submit", value="Save" />
     </form>
 {% endblock %}

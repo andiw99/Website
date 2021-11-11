@@ -33,14 +33,21 @@ ALLOWED_HOSTS = ["djangoproject.localhost", "192.168.178.22", "127.0.0.1", "91.4
 """
 
 DEBUG = False
-ALLOWED_HOSTS = ["djangoproject.localhost", "127.0.0.1", "192.168.178.22", "91.49.52.140"]
+ALLOWED_HOSTS = ["djangoproject.localhost", "127.0.0.1", "192.168.178.22", "91.49.52.140", "andi-freelancing.ml", "weitzel-it.ml", "www.weitzel-it.ml"]
+
 
 # Production Settings
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
 
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
+
+SECURE_HSTS_SECONDS = 31536000
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_HSTS_PRELOAD = True
 
 # E-Mail config
 
@@ -75,6 +82,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'csp.middleware.CSPMiddleware'
 ]
 
 ROOT_URLCONF = 'djangoProject.urls'

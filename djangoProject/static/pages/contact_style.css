@@ -7,11 +7,25 @@ ul.contact {
     margin-right:10%;
     margin-left:5%;
     padding: 0;
-
 }
 
-li.contact {
+dl.contact {
+    list-style-type: none;
+    margin-right:10%;
+    margin-left:5%;
+    padding: 0;
+}
+dt.contact {
     color: black;
+    display: inline-block;
+    clear: left;
+    float: left;
+    width: 100px;
+}
+
+
+dd.contact {
+    float: left
 }
 
 div.pollsindex {

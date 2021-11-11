@@ -1,5 +1,5 @@
 h2 {
-    margin-left: 610px;
+    margin-left: 30%;
 }
 
 li a.pollsindex {
@@ -58,8 +58,8 @@ ul li.pollsindex:hover {
 ul.pollsindex {
     list-style-type: none;
     padding: 0;
-    margin-left: 600px;
-    margin-right: 600px;
+    margin-left: 30%;
+    margin-right: 30%;
     background-color: rgba(250,250,250,0.5);
     border-radius: 10px;
     border-top: 1px solid grey;
