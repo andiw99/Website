@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ["djangoproject.localhost", "192.168.178.22", "127.0.0.1", "91.4
 """
 
 DEBUG = False
-ALLOWED_HOSTS = ["djangoproject.localhost", "127.0.0.1", "192.168.178.22", "91.49.52.140", "andi-freelancing.ml", "weitzel-it.ml", "www.weitzel-it.ml"]
+ALLOWED_HOSTS = ["91.49.52.140", "andi-freelancing.ml", "weitzel-it.ml", "www.weitzel-it.ml"]
 
 
 # Production Settings
@@ -48,6 +48,19 @@ SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 SECURE_HSTS_PRELOAD = True
+
+# Content Security Policy
+CSP_DEFAULT_SRC = ("'none'", )
+CSP_BASE_URI = ("'none'", )
+CSP_FRAME_ANCESTORS = ("'none'", )
+CSP_FORM_ACTION = ("'self'", )
+#CSP_STYLE_SRC = ("'self'", "'unsafe-inline'")
+#CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'")
+CSP_STYLE_SRC = ("'self'", "'unsafe-hashes'", "'sha256-Oq5u6/x6FnhIG3zaaQ3O/jN4eAyLsoftTNLmLVKwqeM='", )
+CSP_SCRIPT_SRC = ("'self'", )
+CSP_IMG_SRC = ("'self'",  "data:")
+CSP_FONT_SRC = ("'self'", )
+CSP_INCLUDE_NONCE_IN = ("script-src", )
 
 # E-Mail config
 

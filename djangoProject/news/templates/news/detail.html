@@ -8,7 +8,7 @@
     <form action="{% url 'polls:vote' article.id %}" method="post">
     {% csrf_token %}
     <img class="banner" src="{{ article.banner.url }}">
-    <h2 style="margin-left: 25%">{{ article.title }}</h2>
+    <h2 id="articledetail-header">{{ article.title }}</h2>
     <div class="text">
     {{ article.article_text|linebreaks }}
     </div>

@@ -7,7 +7,7 @@ li a.pollsindex {
     padding: 10px;
     list-style-type: none;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 20px;
     display: block;
 }
 
@@ -168,6 +168,7 @@ ul.pollschoices {
     display: inline-block;
     font-size: 15px;
     cursor: pointer;
+    font-size: 20px;
     font-family: Helvetica;
     border-radius: 4px;
     border: 1px solid lightgrey;
@@ -203,13 +204,30 @@ dt.result {
     color: black;
     clear: left;
     float: left;
-    font-size: 2vh;
+    font-size: 20px;
 }
 
 
 dd.result {
-    font-size: 2vh;
+    font-size: 20px;
     padding: 1%;
     float: right;
     display: inline-block;
+}
+
+#pollsindex-create {
+    margin-left: 30%;
+}
+
+#pollsresult-header {
+    margin-left: 30%
+}
+
+#pollscreate-div {
+    margin-left: 30%;
+}
+
+#choicesheader-votes {
+    float: right;
+    margin-right: 6%
 }

@@ -68,6 +68,7 @@ div.text {
     border-right: 1px solid grey;
     border-left: 1px solid grey;
     text-align: justify;
+    margin-bottom: 10vh;
 }
 
 
@@ -121,6 +122,7 @@ div.descriptionwrapper {
     margin-top: 5vh;
     margin-bottom: 0;
     padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 img.banner {
@@ -180,4 +182,24 @@ span.helptext {
 
 #id_banner{
 
+}
+
+
+#articleindex-header {
+    margin-left: 5%;
+    padding-top: 5vh
+}
+
+#articleindex-create {
+    font-size: 20px;
+    margin-bottom: 5vh;
+    margin-left: 5%
+}
+
+#articledetail-header {
+    margin-left: 25%;
+}
+
+#articlecreate-div {
+    margin-left: 30%;
 }

@@ -117,7 +117,7 @@ img.banner {
     opacity: 1;
     position: absolute;
     padding:0;
-    margin-left:0
+    margin-left:0;
 }
 
 div.articleslider {
@@ -133,6 +133,7 @@ div.articleslider {
     border-left: 4px solid rgba(128, 191, 255, 1);
     padding: 0;
     position: relative;
+    margin-top: 10vh;
 }
 
 div.bannerwrapper {
@@ -144,6 +145,7 @@ div.bannerwrapper {
     padding:0;
     margin-left: -5px;
 }
+
 div.bannerwrapper:first-child{
     margin-left:0;
 }
@@ -288,4 +290,23 @@ h1.serviceindex {
     margin-top: 0;
     font-size: 3vh;
     padding: 5vh
+}
+
+#buttonslider-right {
+    left: 99.5%;
+    transform: translate(-100%, -50%)
+}
+
+a.services {
+    text-decoration: None;
+    color: gray;
+}
+
+#service-left {
+    float: left;
+    padding-right: 0.5vh;
+}
+
+#service-image-left{
+    float: left;
 }

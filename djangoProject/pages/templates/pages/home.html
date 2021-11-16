@@ -3,8 +3,11 @@
     {% load static %}
     <link rel="stylesheet"  href="{% static 'pages/style.css' %}">
 
+
+
     {% if latest_article_list %}
-        <div class="articleslider" id="articleslider" style="margin-top: 10vh">
+
+        <div class="articleslider" id="articleslider">
         {% for article in latest_article_list %}
                 {% with forloop.counter|stringformat:"s" as counter %}
                 {% with "article_"|add:counter as article_id %}
@@ -31,18 +34,32 @@
             {% endwith %}
         {% endfor %}
 
-        <div class="buttonslider" onclick="swipe_left({{ nr_articles }})"> <img class="arrow" src="/media/images/pfeil-links.png"></div>
-        <div class="buttonslider" style="left: 99.5%; transform: translate(-100%, -50%)" onclick="swipe_right({{ nr_articles }})"><img class="arrow" src="/media/images/pfeil-rechts.png"></div>
+        <div class="buttonslider" id="buttonslider-left"> <img class="arrow" src="/media/images/pfeil-links.png"></div>
+        <div class="buttonslider" id="buttonslider-right"><img class="arrow" src="/media/images/pfeil-rechts.png"></div>
         </div>
     {% else %}
 
     {% endif %}
+
+
     <div id="clock_container">
-    <img id="clock" src='{% static "pages/images/clock-cropped.png" %}' style="margin-bottom: 5vh">
+    <img id="clock" src='{% static "pages/images/clock-cropped.png" %}'>
     <div id="minute-hand"></div>
     <div id="hour-hand"></div>
     <div id="second-hand"></div>
     </div>
-    <script src="{% static 'pages/home.js' %}" onload="start_slide_article({{ nr_articles }}); indicator({{ nr_articles }})">
+
+    <script src="{% static 'pages/home.js' %}"> </script>
+    <script nonce="{{ request.csp_nonce }}">
+        document.addEventListener('DOMContentLoaded', function () {
+            indicator({{ nr_articles }})
+            start_slide_article({{ nr_articles }})
+            document.getElementById("buttonslider-left").addEventListener("click", function() {
+                swipe_left({{ nr_articles }});
+            })
+            document.getElementById("buttonslider-right").addEventListener("click", function() {
+                swipe_right({{ nr_articles }});
+            })
+        });
     </script>
 {% endblock %}

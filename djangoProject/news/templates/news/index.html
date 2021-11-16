@@ -6,7 +6,7 @@
 {% if latest_article_list %}
     <div class="wrapper">
     <ul class="articleindex">
-    <li> <h1 style="margin-left: 5%; padding-top: 5vh">Latest Articles:</h1></li>
+    <li> <h1 id="articleindex-header">Latest Articles:</h1></li>
     {% for article in latest_article_list %}
         <li class="articleindex">
             <a class="articleindex" href="{% url "news:detail" article.title %}">
@@ -29,7 +29,5 @@
     <p>No polls are available.</p>
 
 {% endif %}
-    <div style="margin-bottom: 6vh">
-    <a class="button" style="font-size: 20px; margin-bottom: 5vh; margin-left: 5%" href="{% url "news:create"%}"> Create </a>
-    </div>
+    <a class="button" id="articleindex-create" href="{% url "news:create"%}"> Create </a>
 {% endblock %}

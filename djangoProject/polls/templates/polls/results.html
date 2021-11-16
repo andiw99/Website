@@ -3,7 +3,7 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "polls/style.css" %}">
-<h1 style="margin-left: 30%">{{ question.question_text }}</h1>
+<h1 id="pollsresult-header">{{ question.question_text }}</h1>
 
 <dl class="result">
 {% for choice in question.choice_set.all %}
@@ -14,6 +14,6 @@
 {% endfor %}
 </dl>
 
-<a class="button" style="margin-left: 30%" href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a class="button" id="pollsindex-create" href="{% url 'polls:detail' question.id %}">Vote again?</a>
 
 {% endblock %}
