@@ -1,0 +1,140 @@
+ul.articleindex {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: auto;
+    background-color: rgba(250,250,250,0.5);
+    border-radius: 10px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+}
+
+li a.articleindex {
+    color: black;
+    padding: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+li.articleindex:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+li.articleindex {
+    display: block;
+}
+
+li.articleindex:first-child {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+li.articleindex:last-child {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+a.news {
+    font-size: 20px;
+    text-decoration: none;
+    background-color: white;
+    margin-left:10%;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+p.news {
+    margin-left: 25%;
+    text-align: justify;
+}
+
+div.text {
+    padding: 10px;
+    margin: auto;
+    width: 50%;
+    background-color: rgba(250,250,250,0.5);
+    border-radius: 10px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    text-align: justify;
+}
+
+img.index {
+    width:35vh;
+    height: 25vh;
+    object-fit: cover;
+    display: inline-block;
+    margin-right: 30px;
+    float: left;
+}
+
+div.imagewrapper {
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+span.index {
+    display: block;
+}
+
+span.index:hover {
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+
+h3.articleindex {
+    display: inline;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3vh;
+}
+
+div.headerwrapper {
+    height: 5vh;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: top;
+    display: block;
+}
+
+p.articleindex {
+    display: inline;
+    font-size: 2vh;
+    color: black;
+    line-height: 2.5vh;
+}
+
+div.descriptionwrapper {
+    height: 15vh;
+    padding: 0;
+    top: 0;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+
+img.banner {
+    margin: auto;
+    display: block;
+    margin-top:2vh;
+    width: 50%;
+    height: 30vh;
+    object-fit: cover
+}

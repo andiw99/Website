@@ -1,0 +1,45 @@
+h2 {
+    margin-left:5%;
+}
+
+ul.contact {
+    list-style-type: none;
+    margin-right:10%;
+    margin-left:5%;
+    padding: 0;
+}
+
+dl.contact {
+    list-style-type: none;
+    margin-right:10%;
+    margin-left:5%;
+    padding: 0;
+}
+dt.contact {
+    color: black;
+    display: inline-block;
+    clear: left;
+    float: left;
+    width: 100px;
+    line-height: 40px;
+}
+
+
+dd.contact {
+    float: left
+}
+
+div.pollsindex {
+    text-align: center;
+    background-color: white;
+}
+
+img.social_images_contact {
+    margin-left: auto;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2em;
+    width: 2em;
+    float: right;
+    margin-right: 90%;
+}

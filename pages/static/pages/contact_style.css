@@ -1,0 +1,30 @@
+h2 {
+    margin-left:5%;
+}
+
+ul.contact {
+    list-style-type: none;
+    margin-right:10%;
+    margin-left:5%;
+    padding: 0;
+
+}
+
+li.contact {
+    color: black;
+}
+
+div.pollsindex {
+    text-align: center;
+    background-color: white;
+}
+
+img.social_images_contact {
+    margin-left: auto;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2em;
+    width: 2em;
+    float: right;
+    margin-right: 90%;
+}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<head>Details</head>
+
+{% block content %}
+
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "polls/style.css" %}">
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <h2 class="pollsindex">{{ question.question_text }}</h2>
+    {% if error_message %}<p style="margin-left:610px"><strong>{{ error_message }}</strong></p>{% endif %}
+    <ul class="pollsindex">
+    {% for choice in question.choice_set.all %}
+        <input class="polls" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label class="polls" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+    {% endfor %}
+    </ul>
+
+<input class="button" id="pollsindex-create" type="submit" value="Vote"> <a class="button" href="{% url "polls:index" %}">Back</a>
+</form>
+{% endblock %}
